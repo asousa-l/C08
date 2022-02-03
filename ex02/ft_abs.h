@@ -5,14 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: asousa-l <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/30 19:21:24 by asousa-l          #+#    #+#             */
-/*   Updated: 2022/01/30 19:23:26 by asousa-l         ###   ########.fr       */
+/*   Created: 2022/02/03 11:09:43 by asousa-l          #+#    #+#             */
+/*   Updated: 2022/02/03 11:09:50 by asousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	FT_ABS_H
+#ifndef FT_ABS_H
 # define FT_ABS_H
-
 # define ABS(Value)	((Value < 0) ? -Value : Value)
-
 #endif
