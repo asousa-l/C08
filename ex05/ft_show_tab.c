@@ -49,20 +49,20 @@ void	ft_putstr(char *str)
 		ft_putchar(*str);
 		str++;
 	}
-	ft_putchar("\n");
+	ft_putchar('\n');
 }
 
-void	ft_show_tab(struct s_stock_str *par)
+void	ft_show_tab(struct s_stock_str *var)
 {
 	int	i;
 
 	i = 0;
-	while (par[i].str)
+	while (var[i].str)
 	{
-		ft_putstr(par[i].str);
-		ft_putnbr(par[i].size);
+		ft_putstr(var[i].str);
+		ft_putnbr(var[i].size);
 		ft_putchar('\n');
-		ft_putstr(par[i].copy);
+		ft_putstr(var[i].copy);
 		i++;
 	}
 }
