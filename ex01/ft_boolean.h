@@ -14,7 +14,6 @@
 # define FT_BOOLEAN_H
 
 # include <unistd.h>
-# include <stdbool.h>
 
 typedef enum bool{
 	true = 1,
