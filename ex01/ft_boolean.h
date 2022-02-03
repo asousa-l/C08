@@ -24,8 +24,8 @@ typedef enum bool{
 # define EVEN_MSG "I have an even number of arguments.\n"
 # define ODD_MSG "I have an odd number of arguments.\n"
 
-# define TRUE 1
-# define FALSE 0
+# define TRUE true
+# define FALSE false
 # define SUCCESS FALSE
 
 # define EVEN(i) i % 2 == 0

@@ -12,6 +12,7 @@
 
 #include "ft_stock_str.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 int	ft_strlen(char *str)
 {
@@ -46,22 +47,37 @@ char	*ft_strdup(char *src)
 
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
-	t_stock_str	*tab;
-	int			i;
+	struct s_stock_str	*tab;
+	int					i;
 
 	i = 0;
-	tab = malloc(sizeof(t_stock_str) * (ac + 1));
+	tab = malloc(sizeof(struct s_stock_str) * (ac + 1));
 	if (!tab)
 		return (NULL);
 	while (i < ac)
 	{
-		if (tab[i].str == NULL || tab[i].copy == NULL)
-			return (NULL);
 		tab[i].size = ft_strlen(av[i]);
 		tab[i].copy = ft_strdup(av[i]);
-		tab[i].str = ft_strdup(av[i]);
+		tab[i].str = av[i];
 		i++;
 	}
-	tab[i].str = NULL;
+	tab[i] = (struct s_stock_str){0, 0, 0};
 	return (tab);
 }
+/*
+int					main(int ac, char **av)
+{
+	int					index;
+	struct s_stock_str	*structs;
+
+	structs = ft_strs_to_tab(ac, av);
+	index = 0;
+	while (index < ac)
+	{
+		printf("%d\n", index);
+		printf("\t| original : $%s$ @ %p\n", structs[index].str, structs[index].str);
+		printf("\t|   copied : $%s$ @ %p\n", structs[index].copy, structs[index].copy);
+		printf("\t|     size : %d\n", structs[index].size);
+		index++;
+	}
+}*/

@@ -52,17 +52,17 @@ void	ft_putstr(char *str)
 	ft_putchar('\n');
 }
 
-void	ft_show_tab(struct s_stock_str *var)
+void	ft_show_tab(struct s_stock_str *par)
 {
 	int	i;
 
 	i = 0;
-	while (var[i].str)
+	while (par[i].str)
 	{
-		ft_putstr(var[i].str);
-		ft_putnbr(var[i].size);
+		ft_putstr(par[i].str);
+		ft_putnbr(par[i].size);
 		ft_putchar('\n');
-		ft_putstr(var[i].copy);
+		ft_putstr(par[i].copy);
 		i++;
 	}
 }
